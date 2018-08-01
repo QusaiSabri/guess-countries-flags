@@ -1,0 +1,85 @@
+.hint {
+  /* background-color: tomato; */
+  height: 3.5em;
+  font-size: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+  width: auto;
+  max-width: 370px;
+  text-align: center;
+  /* background-color: rgb(47, 60, 61); */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hint button {
+  height: 30px;
+  width: 50px;
+  font-family: cursive;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-right: 2em;
+  outline: none;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.hint button:hover {
+  cursor: pointer;
+  background-color: #16425f;
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 35px 35px 0 rgba(0, 0, 0, 0.2);
+  /* width: (100% + 10px); */
+  /* height: 1em; */
+}
+.hint li {
+  /* text-align: left; */
+  color: #5d5c5c;
+  /* font-weight: bold; */
+  display: flex;
+  align-content: flex-start;
+}
+
+.hintList {
+  /* text-align: left; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* flex-wrap: wrap;
+  align-items: center; */
+}
+
+#disabled {
+  background-color: gray;
+  color: black;
+  box-shadow: none;
+}
+
+#disabled:hover {
+  cursor: default;
+  box-shadow: none;
+  /* width: (100% + 10px); */
+  /* height: 1em; */
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .hint {
+    width: 300px;
+    max-height: 4.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,53 @@
+.score {
+  width: 500px;
+  height: 70px;
+  color: #ffffff;
+  background-color: #3498db;
+  font-family: Open Sans Condensed;
+  text-decoration: none;
+  font-size: 1.8em;
+  border: 2px #ffffff solid;
+  /* margin-top: 1em; */
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: 5px; */
+  padding: 5px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  /* display: inline-block; */
+  border-radius: 30px;
+  text-align: center;
+  vertical-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+#scoreNumber {
+  color: #eed7bb;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .score {
+    width: 350px;
+    height: 40px;
+    font-size: 1.4em;
+    border: 1.3px #ffffff solid;
+    margin-top: 1em;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .score {
+    width: 300px;
+    height: 40px;
+    font-size: 1.4em;
+    border: 1.3px #ffffff solid;
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,43 @@
+.flag {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  max-width: 700px;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  /* border: 2px solid rgb(109, 109, 110); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .flag {
+    width: auto;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .flag {
+    max-width: 500px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .flag {
+    width: auto;
+    max-width: 350px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .flag {
+    width: auto;
+    background-size: cover;
+    height: 200px;
+  }
+}

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #16425f;
+  border: 2px #ffffff solid;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 35px 35px 0 rgba(0, 0, 0, 0.2);
+  /* width: (100% + 10px); */
+  /* height: 1em; */
+}
+.highlight:hover {
+  background-color: #ffffff;
+  color: #3498db;
+}
+
+.options-button {
+  width: auto;
+  height: 70px;
+  color: #ffffff;
+  background-color: #3498db;
+  font-family: Open Sans Condensed;
+  text-decoration: none;
+  font-size: 1.5em;
+  border: 2px #ffffff solid;
+  margin: 10px 15px 10px 5px;
+  padding: 15px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+  border-radius: 40px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .button-correct-answer {
+  color: #009999;
+  border: #009999;
+  opacity: 0;
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  transform: scale(2, 2);
+} */
+
+.btn-disabled {
+  /* color: red; */
+  background-color: gray;
+}
+
+@media screen and (max-width: 992px) {
+  .options-button {
+    font-size: 1.5em;
+    border: 2px #ffffff solid;
+    margin: 10px 15px 10px 5px;
+    padding: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    display: inline-block;
+    border-radius: 35px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .options-button {
+    height: auto;
+    min-height: 50px;
+    font-size: 1.4em;
+    border: 1px #ffffff solid;
+    margin: 5px 5px;
+    padding: 8px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    display: inline-block;
+    border-radius: 30px;
+  }
+}
