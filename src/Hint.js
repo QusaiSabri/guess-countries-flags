@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./Hint.css";
+import React, { Component } from 'react';
+import './Hint.css';
 
 class Hint extends Component {
   render() {
@@ -9,6 +9,8 @@ class Hint extends Component {
     const { hintRequested } = this.props;
     const hideHint = true; //this.props;
 
+    //Sometimes the capital is an empty string (missing from Countries REST APIs)
+
     let hintView = hideHint => {
       if (hideHint === false) {
         return null;
@@ -16,13 +18,13 @@ class Hint extends Component {
         return (
           <div>
             <ul>
-              {hintRequested >= 1 ? <li>The Capital is {capital}.</li> : null}
-              {hintRequested >= 2 ? (
+              {capital.length ? <li>The Capital is {capital}.</li> : null}
+              {Number(population).toLocaleString().length ? (
                 <li>
                   Has a population of {Number(population).toLocaleString()}.
                 </li>
               ) : null}
-              {hintRequested >= 3 ? <li>Subregion: {subregion}.</li> : null}
+              {subregion.length ? <li>Subregion: {subregion}.</li> : null}
             </ul>
           </div>
         );

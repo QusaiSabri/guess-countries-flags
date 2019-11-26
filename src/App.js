@@ -1,15 +1,15 @@
 //1 when disabled change button colors to gray
-
-import React, { Component } from "react";
+import { Helmet } from 'react-helmet';
+import React, { Component } from 'react';
 // import logo from "./logo.svg";
-import "./App.css";
-import shuffle from "shuffle-array";
-import Options from "./Options";
-import Flag from "./Flag";
-import Scoreboard from "./Scoreboard";
-import Hint from "./Hint";
-import "../node_modules/font-awesome/css/font-awesome.min.css";
-import SharingButtons from "./SharingButtons";
+import './App.css';
+import shuffle from 'shuffle-array';
+import Options from './Options';
+import Flag from './Flag';
+import Scoreboard from './Scoreboard';
+import Hint from './Hint';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+import SharingButtons from './SharingButtons';
 
 class App extends Component {
   constructor(props) {
@@ -17,12 +17,13 @@ class App extends Component {
     this.state = {
       countries: [],
       randomFourCountries: [],
-      correctCountry: "",
+      correctCountry: '',
       hasAnswered: null,
       isButtonDisabled: false,
       score: 0,
       totalQuestions: 0,
-      hintRequested: 0
+      hintRequested: 0,
+      selectedButton: 0
       // icons: ""
     };
     this.handleClick = this.handleClick.bind(this);
@@ -31,7 +32,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const countriesUrl = "https://restcountries.eu/rest/v2/all";
+    const countriesUrl = 'https://restcountries.eu/rest/v2/all';
 
     const getCountries = () => {
       return fetch(countriesUrl)
@@ -55,7 +56,7 @@ class App extends Component {
 
   HandleClickHint() {
     this.setState(prevState => {
-      return { hintRequested: prevState.hintRequested + 1 };
+      return { hintRequested: prevState.hintRequested + 3 };
     });
 
     // console.log("clicked");
@@ -82,6 +83,11 @@ class App extends Component {
       this.setState(prevState => {
         return { score: prevState.score + 1 };
       });
+
+    //if (this.state.correctCountry.numericCode === e.target.value) {
+    this.setState({ selectedButton: e.target.value });
+    //}
+
     // }
   }
 
@@ -99,7 +105,8 @@ class App extends Component {
       correctCountry: correctCountry,
       hasAnswered: hasAnswered,
       isButtonDisabled: false,
-      hintRequested: 0
+      hintRequested: 0,
+      selectedButton: 0
     });
 
     // this.setState(prevState => ({
@@ -114,7 +121,8 @@ class App extends Component {
       correctCountry,
       isButtonDisabled,
       score,
-      totalQuestions
+      totalQuestions,
+      selectedButton
     } = this.state;
 
     // const btnsClasses = "options-button ";
@@ -123,23 +131,23 @@ class App extends Component {
       if (hasAnswered) {
         return (
           <h3 className="Message">
-            <i className="fa fa-smile-o fa-2x" aria-hidden="true" />&nbsp;Correct!
+            <i className="fa fa-smile-o fa-2x" aria-hidden="true" />
+            &nbsp;Correct!
             <button onClick={this.onNext} id="btn-next">
-              NEXT &nbsp;<i
-                className="fa fa-chevron-right"
-                aria-hidden="true"
-              />
+              Next &nbsp;
+              <i className="fa fa-chevron-right" aria-hidden="true" />
             </button>
           </h3>
         );
       } else if (hasAnswered === false) {
         return (
           <h3 className="Message">
-            <i className="fa fa-frown-o fa-2x" aria-hidden="true" />&nbsp;
-            Incorrect, the correct answer is {this.state.correctCountry.name}
+            <i className="fa fa-frown-o fa-2x" aria-hidden="true" />
+            &nbsp; Incorrect, the correct answer is{' '}
+            {this.state.correctCountry.name}
             <button onClick={this.onNext} id="btn-next">
               <div id="nextBtnContent">
-                NEXT &nbsp;
+                Next &nbsp;
                 <i className="fa fa-chevron-right" aria-hidden="true" />
               </div>
             </button>
@@ -152,17 +160,23 @@ class App extends Component {
 
     gameView = (
       <div className="App">
-        {this.state.randomFourCountries.map(country => (
-          <Options
-            key={country.numericCode}
-            name={country.name}
-            correctCountry={correctCountry.name}
-            handleClick={this.handleClick}
-            isButtonDisabled={isButtonDisabled}
-          />
-        ))}
+        <div className="flag-area">
+          <Flag flag={correctCountry.flag} alt={correctCountry.name} />
+        </div>
         {Message(this.state.hasAnswered)}
-        <Flag flag={correctCountry.flag} alt={correctCountry.name} />
+        <div className="options-area">
+          {this.state.randomFourCountries.map(country => (
+            <Options
+              key={country.numericCode}
+              value={country.numericCode}
+              name={country.name}
+              correctCountry={correctCountry.name}
+              handleClick={this.handleClick}
+              isButtonDisabled={isButtonDisabled}
+              selectedButton={selectedButton}
+            />
+          ))}
+        </div>
         {/* <SharingButtons /> */}
       </div>
     );
@@ -172,15 +186,37 @@ class App extends Component {
 
     return (
       <div>
+        <Helmet>
+          {/* <title>{"Guess_The_Flag"}</title> */}
+          {/* <meta name="description" content={"How Many Flags Do You Know?"} />
+          <meta name="og:image" content={"/GuessTheFlag.png"} /> */}
+          <meta
+            property="og:url"
+            content="https://qusay19.github.io/guess-countries-flags/"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            id="og-image"
+            property="og:image"
+            content="https://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
+          />
+          <meta property="og:title" content="Guess the Flag" />
+          <meta
+            property="og:description"
+            content="How Many Flags Do You Know?"
+          />
+        </Helmet>
+        {/* <meta property="og:image" content="public/imgs/GuessTheFlag.png"> */}
+        <Scoreboard score={score} totalQuestions={totalQuestions} />
         {gameView}
         <Hint
           correctCountry={correctCountry}
           hintRequested={this.state.hintRequested}
           HandleClickHint={this.HandleClickHint}
         />
-        <Scoreboard score={score} totalQuestions={totalQuestions} />
+        {/* <h6>Share on</h6> */}
         <SharingButtons />
-        <p className="copyright">© 2018 Qusay Sabri. All rights reserved.</p>
+        <p className="copyright">© 2018 Qusai Sabri. All rights reserved.</p>
       </div>
     );
   }

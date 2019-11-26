@@ -10,6 +10,9 @@
   flex-grow: 0;
   /* background-color: brown; */
 }
+#share-text {
+  margin-left: 4px;
+}
 
 #share-buttons {
   /* letter-spacing: 1px; */
@@ -25,7 +28,16 @@
   /* background-color: brown; */
 }
 
+#share-buttons h6 {
+  /* letter-spacing: 1px; */
+  text-align: center;
+  /* background-color: brown; */
+}
+
 @media screen and (max-width: 992px) {
+  #share-text {
+    margin-top: 14px;
+  }
   #share-buttons {
     /* letter-spacing: 1px; */
     font-size: 11px;
@@ -37,6 +49,21 @@
     flex-direction: row;
     justify-content: center;
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #share-buttons {
+    /* letter-spacing: 1px; */
+    font-size: 10px;
+    margin-bottom: 0.1px;
+  }
+
+  #share-buttons h6 {
+    /* letter-spacing: 1px; */
+    text-align: center;
+    vertical-align: middle;
+    /* background-color: brown; */
   }
 }
 

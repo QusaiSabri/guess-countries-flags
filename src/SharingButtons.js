@@ -1,11 +1,13 @@
-import React, { Component } from "react";
-import "./SharingButtons.css";
+import React, { Component } from 'react';
+import './SharingButtons.css';
 
 class SharingButtons extends Component {
   render() {
     return (
       // <!-- I got these buttons from simplesharebuttons.com -->
+
       <div id="share-buttons">
+        <p id="share-text">Share:</p>
         {/* <!-- Buffer -->
     <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com&amp;text=Simple Share Buttons" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/buffer.png" alt="Buffer" />
@@ -23,7 +25,7 @@ class SharingButtons extends Component {
 
         {/* <!-- Facebook --> */}
         <a
-          href="http://www.facebook.com/sharer.php?u=https://MyURL.com"
+          href="https://www.facebook.com/sharer.php?u=https://qusaisabri.github.io/guess-countries-flags/"
           target="_blank"
         >
           <img
@@ -34,7 +36,7 @@ class SharingButtons extends Component {
 
         {/* <!-- Google+ --> */}
         <a
-          href="https://plus.google.com/share?url=https://MyURL.com"
+          href="https://plus.google.com/share?url=https://qusaisabri.github.io/guess-countries-flags/"
           target="_blank"
         >
           <img
@@ -45,7 +47,7 @@ class SharingButtons extends Component {
 
         {/* <!-- LinkedIn --> */}
         <a
-          href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://MyURL.com"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://qusaisabri.github.io/guess-countries-flags/"
           target="_blank"
         >
           <img
@@ -54,22 +56,9 @@ class SharingButtons extends Component {
           />
         </a>
 
-        {/* <!-- Pinterest --> */}
-        <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
-          <img
-            src="https://simplesharebuttons.com/images/somacro/pinterest.png"
-            alt="Pinterest"
-          />
-        </a>
-
-        {/* <!-- Print -->
-    <a href="javascript:;" onclick="window.print()">
-        <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
-    </a> */}
-
         {/* <!-- Reddit --> */}
         <a
-          href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons"
+          href="https://reddit.com/submit?url=https://qusaisabri.github.io/guess-countries-flags/&amp;title=How Many Flags Do You Know?"
           target="_blank"
         >
           <img
@@ -78,14 +67,9 @@ class SharingButtons extends Component {
           />
         </a>
 
-        {/* <!-- StumbleUpon-->
-    <a href="http://www.stumbleupon.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/stumbleupon.png" alt="StumbleUpon" />
-    </a> */}
-
         {/* <!-- Tumblr--> */}
         <a
-          href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons"
+          href="https://www.tumblr.com/share/link?url=https://qusaisabri.github.io/guess-countries-flags/&amp;title=How Many Flags Do You Know?"
           target="_blank"
         >
           <img
@@ -96,7 +80,7 @@ class SharingButtons extends Component {
 
         {/* <!-- Twitter --> */}
         <a
-          href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons"
+          href="https://twitter.com/share?url=https://qusaisabri.github.io/guess-countries-flags/&amp;text=How%20Many%20Flags%20Do%20You%20Know?&amp;hashtags=GuessTheFlag"
           target="_blank"
         >
           <img

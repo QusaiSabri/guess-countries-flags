@@ -1,10 +1,12 @@
 {
-  "homepage": "http://qusay19.github.io/flags",
+  "homepage": "http://qusay19.github.io/guess-countries-flags",
   "name": "flag-guessing",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "react-helmet": "^5.2.0",
     "font-awesome": "^4.7.0",
+    "node": "^10.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
@@ -17,5 +19,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }

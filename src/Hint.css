@@ -1,6 +1,6 @@
 .hint {
   /* background-color: tomato; */
-  height: 3.5em;
+  height: 4em;
   font-size: 0.9em;
   margin-left: auto;
   margin-right: auto;
@@ -8,13 +8,11 @@
   margin-bottom: 1.5em;
   padding: 0.5em;
   width: auto;
-  max-width: 370px;
-  text-align: center;
-  /* background-color: rgb(47, 60, 61); */
+  max-width: 400px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
 }
 .hint button {
@@ -32,13 +30,14 @@
   transition: all 0.2s;
   margin-right: 2em;
   outline: none;
-  background-color: #3498db;
-  color: #fff;
+  /* background-color: #3498db; */
+  background-color: #16365f;
+  color: #ffffff;
 }
 
 .hint button:hover {
   cursor: pointer;
-  background-color: #16425f;
+  background-color: #16365f;
   color: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 35px 35px 0 rgba(0, 0, 0, 0.2);
   /* width: (100% + 10px); */
@@ -48,8 +47,8 @@
   /* text-align: left; */
   color: #5d5c5c;
   /* font-weight: bold; */
-  display: flex;
-  align-content: flex-start;
+  /* display: flex;
+  align-content: flex-start; */
 }
 
 .hintList {
@@ -74,12 +73,53 @@
   /* height: 1em; */
 }
 
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .hint {
+    position: fixed;
+    bottom: 70px;
+    left: 30%;
+    /* margin-left: 30%; */
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  .hint {
+    margin-left: 300px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .hint {
+    /* left: 7%; */
+    font-size: 1.2em;
+    /* width: 320px;
+    max-height: 4.5em;
+    margin-top: 1em; */
+    margin-bottom: 7em;
+  }
+}
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
   .hint {
-    width: 300px;
+    left: 7%;
+    font-size: 1em;
+    width: 320px;
+    max-height: 4.5em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    /* bottom: 50px; */
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .hint {
+    left: 7%;
+    font-size: 1em;
+    width: 320px;
     max-height: 4.5em;
     margin-top: 1em;
     margin-bottom: 1em;
+    bottom: 50px;
   }
 }

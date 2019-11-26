@@ -20,17 +20,23 @@ button:hover {
   color: #3498db;
 }
 
+.selectedButton {
+  background-color: #16425f !important;
+  border: 2px #ffffff solid;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 35px 35px 0 rgba(0, 0, 0, 0.2);
+}
+
 .options-button {
   width: auto;
-  height: 70px;
+  height: 50px;
   color: #ffffff;
-  background-color: #3498db;
+  background-color: #5eb5f0;
   font-family: Open Sans Condensed;
   text-decoration: none;
   font-size: 1.5em;
   border: 2px #ffffff solid;
-  margin: 10px 15px 10px 5px;
-  padding: 15px;
+  margin: 1px 2px;
+  padding: 5px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -57,8 +63,8 @@ button:hover {
   .options-button {
     font-size: 1.5em;
     border: 2px #ffffff solid;
-    margin: 10px 15px 10px 5px;
-    padding: 12px;
+    /* margin: 10px 15px 10px 5px; */
+    padding: 9px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
@@ -71,11 +77,11 @@ button:hover {
 @media screen and (max-width: 600px) {
   .options-button {
     height: auto;
-    min-height: 50px;
-    font-size: 1.4em;
+    max-height: 50px;
+    font-size: 1.2em;
     border: 1px #ffffff solid;
-    margin: 5px 5px;
-    padding: 8px;
+    /* margin: 5px 5px; */
+    padding: 6px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;

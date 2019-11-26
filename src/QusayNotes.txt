@@ -1,5 +1,5 @@
-1 - each clickable button should show some Hover effect. -- Done
-2 - Add an arrow style to the next button and change it's color.  -- Done
-3 - add a new tab with searchable flags with info.
-4 - icons share on ipad pro
+1 - change layout
+2 - social media sharing button.
+3 - add * to the hint.
+4 - 
 4 - publish!
