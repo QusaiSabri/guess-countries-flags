@@ -4,7 +4,7 @@ This is a simple project using an API that provides countries data, see how many
 
 Theis project was built using React Js. <br>
 
-Check it out here [Live Demo](https://qusay19.github.io/guess-countries-flags/)
+Check it out here [Live Demo](https://qusaisabri.github.io/guess-countries-flags/)
 
 <!--
 Below you will find some information on how to perform common tasks.<br>
