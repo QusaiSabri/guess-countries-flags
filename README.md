@@ -2,7 +2,7 @@
 
 This is a simple project using an API that provides countries data, see how many flags you know!
 
-Theis project was built using React Js. <br>
+This project was built using React Js. <br>
 
 Check it out here [Live Demo](https://qusaisabri.github.io/guess-countries-flags/)
 
