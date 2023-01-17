@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const countriesUrl = 'https://restcountries.eu/rest/v2/all';
+    const countriesUrl = 'https://restcountries.com/v2/all';
 
     const getCountries = () => {
       return fetch(countriesUrl)
